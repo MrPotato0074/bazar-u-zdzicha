@@ -11,6 +11,7 @@
     justify-content: center;
     flex-direction: row;
     width: 90vw;
+    margin: 20px;
 
     .cart-items-container{
         width: 70%;
@@ -29,8 +30,8 @@
             border-bottom: 1px solid black;
 
             img{
-                max-width: 100px;
-                max-height: 100px;
+                max-width: 90px;
+                max-height: 90px;
                 object-fit: cover;
             }
 
