@@ -1,0 +1,40 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@600&family=Open+Sans&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Unna:wght@700&family=Work+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ba0e8dae74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="basket">
+        <h1>Koszyk</h1>
+        <div class="cart">
+            <div class="cart-items-container">
+                <div class="item-cart">
+                    <img src="images/bazar.jpg" alt="sadsa">
+                    <div class="item-details">
+                        <h3>Bazar na sprzedaz</h3>
+                    <p class="price">120zl</p>
+                    </div>
+
+                    <div class="quantity-container">
+                    <i class="fa-solid fa-minus"></i>
+                    <p class="quantity">12</p>
+                    <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-payment-conatiner">
+                <h2>Do zapłaty: 0 zł</h2>
+            </div>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+    <script src="js/basket.js"></script>
+</body>
+</html>

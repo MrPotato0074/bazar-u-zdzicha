@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | <%=product.id%></title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@600&family=Open+Sans&family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unna:wght@700&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/ba0e8dae74.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <main class="productContainer">
+      <div class="productContainer">
+        <div class="productContent">
+          <img src="<%= product.image %>" alt="<%= product.title %>" />
+          <div class="contentContainer">
+            <div class="titleWithCategory">
+              <h1 class="title">
+                <%= product.title %>
+              </h1>
+              <span>
+                <%= product.category %>
+                 </span
+              >
+            </div>
+            <span class="price">
+              <%= product.price %> PLN
+              </span>
+            <p>
+              <%= product.description %> PLN
+            </p>
+            <button class="add-to-cart-btn" data-id="<%= product.id %>" data-title="<%= product.title %>" data-price="<%= product.price %>" data-image="<%= product.image %>>
+              <i class="fa-solid fa-cart-plus"></i> Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+    <script src="/js/cart.js" defer type="module"></script>
+  </body>
+</html>

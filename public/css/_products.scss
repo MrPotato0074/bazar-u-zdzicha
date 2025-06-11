@@ -1,0 +1,115 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 38px;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #222;
+    }
+
+    .products-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .product-card{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 30%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        cursor: pointer;
+
+        a{
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            
+            img{
+                min-width: 100%;
+                border-radius: 10px;
+                margin-bottom: 12px;
+                object-fit: contain;
+                height: 180px;
+                max-width: 100%;
+            }
+            
+            .title{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                font-size: 19px;
+                margin: 0 0 8px;
+            }
+            
+            .price{
+                font-weight: 700;
+                font-size: 18px;
+                margin-bottom: 6px;
+            }
+            
+            .category{
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 16px;
+                text-transform: capitalize;
+            }
+        }
+
+        .add-to-cart-btn{
+            width: 100%;
+            background-color: #f9f9f9;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover{
+                background-color: lightgray;
+            }
+        }
+    }
+    }
+}
+
+@media (max-width: 992px) {
+    .products{
+        h2{
+            font-size: 28px;
+        }
+        .products-container{
+        justify-content: center;
+        gap: 35px;
+
+    .product-card{
+        width: 90%;
+    }
+    }
+    }
+}
+
+@media (min-width: 992px){
+    .products{
+        .products-container{
+            .product-card{
+                a{
+                    .title{
+                        min-height: 92px;
+                    }
+                }
+            }
+        }
+    }
+}
